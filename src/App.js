@@ -8,9 +8,14 @@ import { ColorModeContext, useMode } from './pages/Admin/Themes'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 import { Route, Routes } from 'react-router-dom'
-import Topbar from './pages/Admin/Scenes/global/Topbar'
-import Dashboard from './pages/Admin/Scenes/dashboard/Dashboard'
-import Sidebar from './pages/Admin/Scenes/global/Sidebar'
+import Topbar from './pages/Admin/Scenes/Topbar'
+import Dashboard from './pages/Admin/Scenes/Dashboard'
+import Sidebar from './pages/Admin/Scenes/Sidebar'
+import Team from './pages/Admin/Scenes/team'
+import Client_registration from './pages/Admin/Scenes/Registrations/clientRgistration'
+import Employee_registration from './pages/Admin/Scenes/Registrations/Employee_registration'
+import Investore_registration from './pages/Admin/Scenes/Registrations/Investore_registration'
+import Property_Booking from './pages/Admin/Scenes/Registrations/Property_Booking'
 
 function App() {
   const [theme, colorMode] = useMode()
@@ -29,6 +34,11 @@ function App() {
          
             <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/client_registration" element={<Client_registration />} />
+            <Route path="/employee_registration" element={<Employee_registration />} />
+            <Route path="/investore_registration" element={<Investore_registration/>} /> 
+           <Route path="/property_booking" element={<Property_Booking />} />
             </Routes>
 
           </main>
