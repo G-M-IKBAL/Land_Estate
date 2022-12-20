@@ -5,15 +5,13 @@ import React from 'react';
 import '../styles/fonts/font-awesome-4.7.0/css/font-awesome.min.css'
 
 
-
-import { useState } from 'react';
 // <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"></link>
 
+import { useState } from 'react';
 
 
 
-
-function login(){
+function Login(){
 
     const [email,setEmail] = useState('');
     const [pass,setPass] = useState('');
@@ -88,4 +86,4 @@ function login(){
 
 }
 
-export default login
+export default Login

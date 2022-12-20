@@ -1,37 +1,53 @@
 import '../styles/employee.css'
 import React, { useState } from 'react'
+import { FaBell } from 'react-icons/fa';
+import Badge from '@mui/material/Badge';
 
-import {
-  Row,
-  Col,
-  Button,
-  CardTitle,
-  Card,
-  CardText,
-  CardHeader,
-  Navbar,
-  NavbarBrand,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Offcanvas,
-  OffcanvasHeader,
-  OffcanvasBody
 
+import {Row,Col,Button,CardTitle,Card,CardText,
+  CardHeader,Navbar,NavbarBrand,Modal,ModalHeader,
+  ModalBody,ModalFooter, Offcanvas,OffcanvasHeader,
+  OffcanvasBody,Input,Form
+  
 } from 'reactstrap'
 
-function employee_dashboard(args) {
+function Employee_dashboard(args) {
   const [modal, setModal] = useState(false)
+
+  const [canvas,setcanvas] = useState(false)
 
   const toggle = () => setModal(!modal)
 
+  const canvas_toggle =( ) => setcanvas(!canvas)
+
   return (
+    
     <>
       <div id="model">
+
         <Modal isOpen={modal} toggle={toggle} {...args}>
           <ModalHeader toggle={toggle}>Modal title</ModalHeader>
           <ModalBody>
+            
+            <Row>
+
+              <Col>
+              <Form>
+             <h2>Name</h2><Input type="text" placeholder='name'>
+              </Input>
+            </Form>
+              </Col>
+
+              <Col>
+              <Form>
+             <h2>Name</h2><Input type="text" placeholder='name'>
+              </Input>
+            </Form>
+              </Col>
+           
+
+            </Row>
+            
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -63,6 +79,29 @@ function employee_dashboard(args) {
         </NavbarBrand>
 
         <h1>Empolyee Dashboard</h1>
+
+      <div>
+      
+  <Button onClick={canvas_toggle}>
+    <h1><FaBell id= "bell" /></h1>
+    <Badge id="bell_badge">
+      4
+    </Badge>
+  </Button>
+
+
+  <Offcanvas direction='end' isOpen={canvas} toggle={canvas_toggle}>
+    <OffcanvasHeader toggle={canvas_toggle} id="canvas_head">
+    <strong>Notifications</strong>
+    </OffcanvasHeader>
+    <OffcanvasBody>
+    
+        Notifications will be shown here 
+     
+    </OffcanvasBody>
+  </Offcanvas>
+</div> 
+
       </Navbar>
 
       <Row id="row">
@@ -162,4 +201,4 @@ function employee_dashboard(args) {
   )
 }
 
-export default employee_dashboard
+export default Employee_dashboard

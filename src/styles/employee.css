@@ -41,6 +41,7 @@ h1{
     font-size: 14px;
     line-height: 1.7;
     color: #fdfdfd;
+   
     
 
 }
@@ -49,10 +50,8 @@ h1{
     padding: 1cm;
     text-align: center;
     font-size: 2cm;
-
-  
-  
-    
+    box-shadow: 0 0.188em 1.550em rgb(26, 25, 25); 
+ 
 }
 
 
@@ -64,4 +63,14 @@ h1{
 
 #btn{
     background-color: rgb(46, 47, 44);
+}
+
+#bell{
+    max-width: 100%;
+    margin-top: -2cm;
+}
+
+#bell_badge{
+    margin-top: -5.5cm;
+    margin-left: 1.5cm;
 }
