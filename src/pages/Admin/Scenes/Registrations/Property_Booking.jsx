@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
-import React from "react";
+import React,{useState} from "react";
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -15,18 +15,16 @@ const phoneRegExp =/^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]
 const checkoutSchema = yup.object().shape({
    
     project: yup.string().required("required"),
-    date: yup.string().required("required"),
+    date: yup.date().required("required"),
     type: yup.string().required("required"),
     number: yup.number().required("required"),
     price: yup.number().required("required"),
-    area: yup.string().required("required"),
+    area: yup.number().required("required"),
     amount: yup.string().required("required"),
-    duration: yup.string().required("required"),
+    duration: yup.number().required("required"),
     rent: yup.number().required("required")
   
   });
-
-
 
 const initialValues = {
    
@@ -34,7 +32,7 @@ const initialValues = {
     date: "",
     type: "",
     price: "",
-    area: "",
+    area: 0,
     amount:"",
     duration: "",
     rent:""
@@ -64,8 +62,12 @@ const names = [
 
     const isNonMobile = useMediaQuery("(min-width:600px)");
 
-    const [value, setValue] = React.useState(null);
-    
+  
+    const {readOnly} = true;
+    const [value, setValue] = useState(null);
+    const [area,setarea]=useState(0)
+    const [price,setprice]=useState(0)
+ 
     const handleFormSubmit = (values) => {
       console.log(values);
     };
@@ -115,6 +117,7 @@ const names = [
                     error={!!touched.project && !! errors.project}
                     helperText={touched.project && errors.project}
                     sx={{ gridColumn: "span 2" }}
+                   
                   >
                    {names.map((name) => (<MenuItem key={name} value={name}> {name} </MenuItem> // data type object
         ))}
@@ -134,6 +137,7 @@ const names = [
                     error={!!touched.type && !!errors.type}
                     helperText={touched.type  && errors.type}
                     sx={{ gridColumn: "span 2" }}
+                   
                   >
                    {plot_type.map((name) => (<MenuItem key={name} value={name}> {name} </MenuItem> // data type object
         ))}
@@ -141,6 +145,9 @@ const names = [
                 </TextField>
 
                   <TextField
+
+                  
+
                     fullWidth
                     variant="filled"
                     type="number"
@@ -162,6 +169,7 @@ const names = [
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.price}
+                    setprice={value}
                     name="price"
                     error={!!touched.price && !!errors.price}
                     helperText={touched.price && errors.price}
@@ -174,8 +182,11 @@ const names = [
                     type="text"
                     label="Area"
                     onBlur={handleBlur}
-                    onChange={handleChange}
+                    
                     value={values.area}
+                    onChange={handleChange}
+                   
+                    
                     name="area"
                     error={!!touched.area && !!errors.area}
                     helperText={touched.area && errors.area}
@@ -183,13 +194,19 @@ const names = [
                   /> 
 
                     <TextField
+
+                    inputProps={{
+                      readOnly: true,
+                      disabled:true,
+                    }}
+
                     fullWidth
                     variant="filled"
                     type="number"
                     label="Totall Amount"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    value={values.amount}
+                    value={2000}
                     name="amount"
                     error={!!touched.amount && !!errors.amount}
                     helperText={touched.amount && errors.amount}
@@ -200,8 +217,8 @@ const names = [
                   <TextField
                     fullWidth
                     variant="filled"
-                    type="text"
-                    label="Totall Duration"
+                    type="number"
+                    label="Totall Duration in Monthes"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.duration}
@@ -236,6 +253,7 @@ const names = [
         }}
         renderInput={(params) => <TextField {...params} 
         label="Date"
+        type="number"
         sx={{ gridColumn: "span 4" }}  
         variant="filled"
         value={values.date}
@@ -247,12 +265,13 @@ const names = [
         />
       }
       />
+
     </LocalizationProvider> 
 
                 </Box>
                 <Box display="flex" justifyContent="end" mt="20px">
                   <Button type="submit" color="secondary" variant="contained">
-                    Create New User
+                    Book Propert
                   </Button>
                 </Box>
               </form>
@@ -260,9 +279,6 @@ const names = [
           </Formik>
         </Box>
       );
-
-
-
 
 }
 

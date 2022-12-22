@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useState } from 'react'
-import Login from './pages/login'
-import Employee from './pages/E_dashboard'
+// import Login from './pages/login'
+// import Employee from './pages/E_dashboard'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { ColorModeContext, useMode } from './pages/Admin/Themes'
@@ -16,6 +16,7 @@ import Client_registration from './pages/Admin/Scenes/Registrations/clientRgistr
 import Employee_registration from './pages/Admin/Scenes/Registrations/Employee_registration'
 import Investore_registration from './pages/Admin/Scenes/Registrations/Investore_registration'
 import Property_Booking from './pages/Admin/Scenes/Registrations/Property_Booking'
+import Calender from './pages/Admin/Scenes/calender.jsx'
 
 function App() {
   const [theme, colorMode] = useMode()
@@ -39,6 +40,7 @@ function App() {
             <Route path="/employee_registration" element={<Employee_registration />} />
             <Route path="/investore_registration" element={<Investore_registration/>} /> 
            <Route path="/property_booking" element={<Property_Booking />} />
+           <Route path="/calender" element={<Calender/>} />
             </Routes>
 
           </main>
