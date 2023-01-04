@@ -1,0 +1,29 @@
+
+
+a.fc-daygrid-day-number {
+  text-decoration: none;
+  color: aliceblue;
+  pointer-events: none;
+}
+
+a.fc-col-header-cell-cushion {
+  text-decoration: none;
+  color: aliceblue;
+  pointer-events: none;
+  
+}
+
+
+.fc-event-title-container
+{
+  height: 50px;
+  width: 10px;
+  
+}
+
+.MuiBox-root.css-fivzm3{
+  margin-left: 1%;
+  
+
+}
+
