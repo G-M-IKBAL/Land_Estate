@@ -1,6 +1,6 @@
 import './App.css'
 import React, { useState } from 'react'
-// import Login from './pages/login'
+//import Login from './pages/login'
 // import Employee from './pages/E_dashboard'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -46,6 +46,9 @@ function App() {
            <Route path="/calender" element={<Calender/>} />
            <Route path="/piechart" element={ <Pie/> }/>
            <Route path="/linechart" element={ <Line/> }/>
+           <Route path="/barchart" element={ <Chart/> }/>
+           {/* <Route path="/login" element={ <Login/> }/> */}
+
             </Routes>
 
           </main>

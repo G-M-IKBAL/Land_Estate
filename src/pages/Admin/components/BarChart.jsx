@@ -13,20 +13,49 @@ const BarChart = ({ isDashboard = false }) => {
     
     <ResponsiveBar
         data={data}
+        theme={{
+           
+            axis: {
+                domain: {
+                  line: {
+                    stroke: colors.grey[100],
+                  },
+                },
+                legend: {
+                  text: {
+                    fill: colors.grey[100],
+                  },
+                },
+                ticks: {
+                  line: {
+                    stroke: colors.grey[100],
+                    strokeWidth: 1,
+                  },
+                  text: {
+                    fill: colors.grey[100],
+                  },
+                },
+              },
+              legends: {
+                text: {
+                  fill: colors.grey[100],
+                },
+              },
+
+        }}
+
         keys={[
-            'hot dog',
+           
             'burger',
-            'sandwich',
-            'kebab',
-            'fries',
-            'donut'
+            
         ]}
-        indexBy="country"
+        indexBy="Month"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
+        padding={0.7}
+        groupMode="grouped"
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'nivo' }}
+        colors={ colors.greenAccent[400] }
         defs={[
             {
                 id: 'dots',
@@ -43,24 +72,24 @@ const BarChart = ({ isDashboard = false }) => {
                 background: 'inherit',
                 color: '#eed312',
                 rotation: -45,
-                lineWidth: 6,
-                spacing: 10
+                lineWidth: 40,
+                spacing: 1
             }
         ]}
-        fill={[
-            {
-                match: {
-                    id: 'fries'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'sandwich'
-                },
-                id: 'lines'
-            }
-        ]}
+        // fill={[
+        //     {
+        //         match: {
+        //             id: 'fries'
+        //         },
+        //         id: 'dots'
+        //     },
+        //     {
+        //         match: {
+        //             id: 'sandwich'
+        //         },
+        //         id: 'lines'
+        //     }
+        // ]}
         borderColor={{
             from: 'color',
             modifiers: [
@@ -76,7 +105,7 @@ const BarChart = ({ isDashboard = false }) => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'country',
+            legend: 'Month',
             legendPosition: 'middle',
             legendOffset: 32
         }}
@@ -84,10 +113,11 @@ const BarChart = ({ isDashboard = false }) => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'food',
+            legend: 'Amount',
             legendPosition: 'middle',
             legendOffset: -40
         }}
+        enableGridY={false}
         enableLabel={false}
         labelSkipWidth={12}
         labelSkipHeight={12}
@@ -119,16 +149,19 @@ const BarChart = ({ isDashboard = false }) => {
                         on: 'hover',
                         style: {
                             itemOpacity: 1
+                            
                         }
                     }
                 ]
             }
         ]}
-        role="application"
-        ariaLabel="Nivo bar chart demo"
-        barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
+
+        // role="application"
+        // ariaLabel="Nivo bar chart demo"
+        // barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
+
     />
-  );
+      );
 };
 
 export default BarChart;

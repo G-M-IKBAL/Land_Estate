@@ -15,6 +15,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import { FitScreen } from "@mui/icons-material";
 // import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 // import Property_Booking from "./Registrations/Property_Booking";
 
@@ -43,7 +44,7 @@ const Sidebar = () => {
   const [selected, setSelected] = useState("Dashboard");
 
   return (
-    <div style={{float:"left"}}>
+    <div style={{float:"left",backgroundColor:colors.primary[400]}}>
     <Box
       sx={{
         "& .pro-sidebar-inner": {
@@ -63,7 +64,7 @@ const Sidebar = () => {
         },
       }}
     >
-      <ProSidebar collapsed={isCollapsed} style={{height:900}}>
+      <ProSidebar collapsed={isCollapsed} style={{ minHeight: '100vh' }} >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -136,6 +137,7 @@ const Sidebar = () => {
             >
               Data
             </Typography>
+            
             <Item
               title="Team"
               to="/team"
@@ -259,6 +261,7 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+           
 
             {/* <Item
               title="Pie Chart"

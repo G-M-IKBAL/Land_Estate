@@ -124,12 +124,16 @@ const Events=[
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box flex="1 1 100%" ml="15px"  sx={{ 
+              
+              
+            }}>
            
 
           <FullCalendar
+ 
+       
             height="75vh"
-          
            initialView="dayGridMonth"
            
             plugins={[

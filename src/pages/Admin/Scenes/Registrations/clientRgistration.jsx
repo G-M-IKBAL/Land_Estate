@@ -43,12 +43,13 @@ const Client_registration=()=>{
     
         <Box>
 
-        <Box mb="20px" sx={{pt:2 }} display="flex" justifyContent="space-between" alignItems="center">
+        <Box m="20px" sx={{pt:2 }} display="flex" justifyContent="space-between" alignItems="center">
           <Header title="Client" subtitle="Create a New User Profile"/>
           </Box>
 
+
           <Formik
-        
+          
             onSubmit={handleFormSubmit}
             initialValues={initialValues}
             validationSchema={checkoutSchema}
@@ -64,6 +65,7 @@ const Client_registration=()=>{
               <form onSubmit={handleSubmit}>
                  
                 <Box
+                
                   display="grid"
                   gap="30px"
                   gridTemplateColumns="repeat(4, minmax(0, 1fr))"

@@ -1,5 +1,30 @@
 import { tokens } from "../Themes";
 
+export const mocNotifications=[
+
+  {
+    Notification:"this is notification 1 "
+  },
+  {
+    Notification:"this is notification 2 "
+  },
+  {
+    Notification:"this is notification 3 "
+  },
+  {
+    Notification:"this is notification 4 "
+  },
+  {
+    Notification:"this is notification 5 "
+  },
+  {
+    Notification:"this is notification 6 "
+  },
+  
+
+]
+
+
 export const mockDataTeam = [
   {
     id: 1,
@@ -319,29 +344,28 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    country: "AD",
-    "hot dog": 137,
-    "hot dogColor": "hsl(229, 70%, 50%)",
+    Month: "January",
+    // "hot dog": 137,
+    // "hot dogColor": "hsl(229, 70%, 50%)",
     burger: 96,
     burgerColor: "hsl(296, 70%, 50%)",
-    kebab: 72,
-    kebabColor: "hsl(97, 70%, 50%)",
-    donut: 140,
-    donutColor: "hsl(340, 70%, 50%)",
+    // kebab: 72,
+    // kebabColor: "hsl(97, 70%, 50%)",
+   
   },
   {
-    country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
+    Month: "Feb",
+    // "hot dog": 55,
+    // "hot dogColor": "hsl(307, 70%, 50%)",
     burger: 28,
     burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)",
+    // kebab: 58,
+    // kebabColor: "hsl(273, 70%, 50%)",
+    // donut: 29,
+    // donutColor: "hsl(275, 70%, 50%)",
   },
   {
-    country: "AF",
+    Month: "March",
     "hot dog": 109,
     "hot dogColor": "hsl(72, 70%, 50%)",
     burger: 23,
@@ -352,7 +376,7 @@ export const mockBarData = [
     donutColor: "hsl(256, 70%, 50%)",
   },
   {
-    country: "AG",
+    Month: "April",
     "hot dog": 133,
     "hot dogColor": "hsl(257, 70%, 50%)",
     burger: 52,
@@ -363,7 +387,7 @@ export const mockBarData = [
     donutColor: "hsl(9, 70%, 50%)",
   },
   {
-    country: "AI",
+    Month: "May",
     "hot dog": 81,
     "hot dogColor": "hsl(190, 70%, 50%)",
     burger: 80,
@@ -374,7 +398,7 @@ export const mockBarData = [
     donutColor: "hsl(285, 70%, 50%)",
   },
   {
-    country: "AL",
+    Month: "June",
     "hot dog": 66,
     "hot dogColor": "hsl(208, 70%, 50%)",
     burger: 111,
@@ -385,10 +409,69 @@ export const mockBarData = [
     donutColor: "hsl(76, 70%, 50%)",
   },
   {
-    country: "AM",
+    Month: "July",
     "hot dog": 80,
     "hot dogColor": "hsl(87, 70%, 50%)",
     burger: 47,
+    burgerColor: "hsl(141, 70%, 50%)",
+    kebab: 158,
+    kebabColor: "hsl(224, 70%, 50%)",
+    donut: 49,
+    donutColor: "hsl(274, 70%, 50%)",
+  },
+
+  {
+    Month: "Aug",
+    "hot dog": 80,
+    "hot dogColor": "hsl(87, 70%, 50%)",
+    burger: 57,
+    burgerColor: "hsl(141, 70%, 50%)",
+    kebab: 158,
+    kebabColor: "hsl(224, 70%, 50%)",
+    donut: 49,
+    donutColor: "hsl(274, 70%, 50%)",
+  },
+  {
+    Month: "Sep",
+    "hot dog": 80,
+    "hot dogColor": "hsl(87, 70%, 50%)",
+    burger: 67,
+    burgerColor: "hsl(141, 70%, 50%)",
+    kebab: 158,
+    kebabColor: "hsl(224, 70%, 50%)",
+    donut: 49,
+    donutColor: "hsl(274, 70%, 50%)",
+  }, 
+
+  {
+    Month: "Oct",
+    "hot dog": 80,
+    "hot dogColor": "hsl(87, 70%, 50%)",
+    burger: 37,
+    burgerColor: "hsl(141, 70%, 50%)",
+    kebab: 158,
+    kebabColor: "hsl(224, 70%, 50%)",
+    donut: 49,
+    donutColor: "hsl(274, 70%, 50%)",
+  },
+
+  {
+    Month: "Nov",
+    "hot dog": 80,
+    "hot dogColor": "hsl(87, 70%, 50%)",
+    burger: 97,
+    burgerColor: "hsl(141, 70%, 50%)",
+    kebab: 158,
+    kebabColor: "hsl(224, 70%, 50%)",
+    donut: 49,
+    donutColor: "hsl(274, 70%, 50%)",
+  },
+
+  {
+    Month: "Dec",
+    "hot dog": 80,
+    "hot dogColor": "hsl(87, 70%, 50%)",
+    burger: 37,
     burgerColor: "hsl(141, 70%, 50%)",
     kebab: 158,
     kebabColor: "hsl(224, 70%, 50%)",
