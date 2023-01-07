@@ -15,6 +15,8 @@ import Client_registration from './pages/Admin/Scenes/Registrations/clientRgistr
 import Employee_registration from './pages/Admin/Scenes/Registrations/Employee_registration'
 import Investore_registration from './pages/Admin/Scenes/Registrations/Investore_registration'
 import Property_Booking from './pages/Admin/Scenes/Registrations/Property_Booking'
+import Project_Rgistration from './pages/Admin/Scenes/Registrations/Project.jsx'
+
 import Calender from './pages/Admin/Scenes/calender.jsx'
 import Chart from './pages/Admin/Scenes/BarChart'
 import Pie from './pages/Admin/Scenes/PieChart'
@@ -46,39 +48,39 @@ function App() {
 
         <div className="app">
 
-        {/* <Sidebar isSidebar={isSidebar} /> */}
+        <Sidebar isSidebar={isSidebar} />
 
-        <Employee_Sidebar isSidebar={isSidebar} />
+        {/* <Employee_Sidebar isSidebar={isSidebar} /> */}
 
           <main className="content">
-          {/* <Topbar setIsSidebar={setIsSidebar} /> */}
+          <Topbar setIsSidebar={setIsSidebar} />
 
-          <Employee_Topbar isSidebar={isSidebar} />
+          {/* <Employee_Topbar isSidebar={isSidebar} /> */}
 
          
-            {/* <Routes>
-            <Route path="/login" element={ <Login/> }/> 
+            <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={ <Login/> }/> 
             <Route path="/team" element={<Team />} />
             <Route path="/client_registration" element={<Client_registration />} />
             <Route path="/employee_registration" element={<Employee_registration />} />
             <Route path="/investore_registration" element={<Investore_registration/>} /> 
            <Route path="/property_booking" element={<Property_Booking />} />
+           <Route path="/project_registration" element={<Project_Rgistration />} />
+
            <Route path="/calender" element={<Calender/>} />
            <Route path="/piechart" element={ <Pie/> }/>
            <Route path="/linechart" element={ <Line/> }/>
            <Route path="/barchart" element={ <Chart/> }/>
-            </Routes> */}
+            </Routes>
 
-            <Routes>
 
+
+            {/* <Routes>
             <Route path="/employeeCR" element={ <EmployeeCR/> }/>
             <Route path="/employeePB" element={ <EmployeePB/> }/>
             <Route path="/expense" element={ <Expenses/> }/>    
-
-
-
-            </Routes>
+            </Routes> */}
 
 
           </main>

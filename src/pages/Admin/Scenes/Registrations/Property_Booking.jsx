@@ -178,8 +178,6 @@ const names = [
 
                   <TextField
 
-                  
-
                     fullWidth
                     variant="filled"
                     type="number"
@@ -191,6 +189,7 @@ const names = [
                     error={!!touched.number && !!errors.number}
                     helperText={touched.number && errors.number}
                     sx={{ gridColumn: "span 16" }}
+                    
                   />
                   
                   <TextField
