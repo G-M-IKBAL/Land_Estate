@@ -30,7 +30,7 @@ const Events=[
       {
         // id: "5123",
         title: "Timed event",
-        date: "2022-12-05T19:00:00.000Z",
+        date: "2022-12-05T19:00",
       },
 
 ]
@@ -38,8 +38,6 @@ const Events=[
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [currentEvents, setCurrentEvents] = useState([]);
-
-  
 
   const handleDateClick = (selected) => {
     const title = prompt("Please enter a new title for your event");

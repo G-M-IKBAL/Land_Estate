@@ -7,12 +7,15 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew'
+
 import SearchIcon from "@mui/icons-material/Search";
 
 import Popover from '@mui/material/Popover';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import Typography from '@mui/material/Typography';
-import { grey } from "@mui/material/colors";
+
 import { mocNotifications } from "../data/mockData";
 
 import Paper from '@mui/material/Paper';
@@ -45,18 +48,7 @@ const Topbar = () => {
 
  
     <Box display="flex" justifyContent="space-between" p={2} >
-      {/* SEARCH BAR */}
-      {/* <Box
-        display="flex"
-        backgroundColor={colors.primary[400]}
-        borderRadius="3px"
-      >
-        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
-        <IconButton type="button" sx={{ p: 1 }}>
-          <SearchIcon />
-        </IconButton>
-      </Box> */}
-
+     
       {/* ICONS */}
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
@@ -69,7 +61,7 @@ const Topbar = () => {
 
 
 
-        <IconButton>
+       <IconButton>
 
         <PopupState variant="popover" popupId="demo-popup-popover">
       {(popupState) => (
@@ -109,9 +101,7 @@ const Topbar = () => {
              marginBottom={-2}
 
              p="0 30px"
-            //  display="flex"
-            //  justifyContent="space-between"
-            //  alignItems="flex-start"
+           
              sx={{borderRadius: '16px', boxShadow:20 , backgroundColor:colors.grey[600]}}
              >
               
@@ -132,11 +122,20 @@ const Topbar = () => {
                fontWeight="bold"
                 color={colors.grey[100]}
                 sx={{marginTop:5}}
+
               >
 
-          <Box sx={{ width: '100%' , boxShadow:20 , borderRadius:'16px'}}>
-          <Stack spacing={1} >
-          <Item >{Noti.Notification}</Item>
+          <Box sx={{ width: '100%' , boxShadow:20 , borderRadius:'16px' , ml:'-60px'}}>
+          <Stack spacing={1} width='170%' height='20%'>
+          <Item > <img
+                  alt="profile-user"
+                  width="45px"
+                  height="45px"
+                  src={`./favicon.ico`}
+                  
+                  
+                  style={{  borderRadius: "50%" }}
+                />{Noti.Notification}</Item>
           </Stack>
           </Box>
 
@@ -152,17 +151,26 @@ const Topbar = () => {
         </div>
       )}
     </PopupState>
-
-          {/* <NotificationsOutlinedIcon /> */}
-
-
         </IconButton>
+
+
+                      {/* Logout  */}
+
+
+
         <IconButton>
+
           <SettingsOutlinedIcon />
+
         </IconButton>
+
+
         <IconButton>
-          <PersonOutlinedIcon />
+          <PowerSettingsNewIcon/>
         </IconButton>
+
+
+
       </Box>
     </Box>
 
