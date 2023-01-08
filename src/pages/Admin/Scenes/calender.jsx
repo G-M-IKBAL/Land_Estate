@@ -123,16 +123,20 @@ const Events=[
 
         {/* CALENDAR */}
         <Box flex="1 1 100%" ml="15px"  sx={{ 
-              
-              
+
+   color : theme.palette.mode === 'dark' ? 
+   { "a.fc-daygrid-day-number": { color: `${colors.grey[100]} `}} 
+   :
+    { "a.fc-daygrid-day-number": { color: `${colors.grey[100]} `}} ,
+
+
             }}>
-           
 
           <FullCalendar
- 
-       
-            height="75vh"
+
+           height="75vh"
            initialView="dayGridMonth"
+           eventTextColor="pink"
            
             plugins={[
                

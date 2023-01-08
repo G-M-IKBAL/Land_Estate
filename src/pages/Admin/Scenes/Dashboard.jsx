@@ -20,6 +20,9 @@ import { styled } from '@mui/material/styles';
 
 import mocNoti from '../data/mockData'
 
+// import motion from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
+
 const Dashboard = () =>{
    const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -39,7 +42,10 @@ const Dashboard = () =>{
 
     return (
       
+ 
+         
 <Box m="20px" >
+
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
@@ -54,6 +60,20 @@ sx={{
 }}
 />
 
+<motion.div
+      className="animatable"
+      whileHover={{
+        scale: 1.2,
+        transition: { duration: 0.3 }
+      }}
+      whileTap={{ scale: 0.9 }}
+    >
+
+   
+      
+    </motion.div>
+
+
        {/* GRID & CHARTS */}
        <Box
         display="grid"
@@ -64,7 +84,14 @@ sx={{
 
 
          {/* ROW 1 */}
-         <Box
+
+          
+
+        
+  
+   
+
+    <Box
           
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -72,14 +99,11 @@ sx={{
           alignItems="center"
           justifyContent="center"
           sx={{borderRadius: '16px',
-
-          // '&:hover': {
-               
-          //   },
             boxShadow:20
          }}
 
          >
+      
 
           <Card
             title="12,361"
@@ -93,7 +117,6 @@ sx={{
             }
           />
           </Box>
-
           <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -163,7 +186,7 @@ sx={{
            {/* ROW 2 */}
 
     {/* Pie Chart */}
-
+ 
     <Box
           gridColumn="span 8"
           gridRow="span 3"

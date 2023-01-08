@@ -31,6 +31,7 @@ import Employee_Sidebar from './pages/Employee/Sidebar'
 import EmployeeCR from './pages/Employee/Registrations/clientRgistration'
 import EmployeePB from './pages/Employee/Registrations/Property_Booking'
 import Expenses from './pages/Employee/Registrations/Expenses'
+import Instalments from './pages/Employee/Registrations/instalments'
 
 
 
@@ -47,17 +48,18 @@ function App() {
 
         <div className="app">
 
-        <Sidebar isSidebar={isSidebar} />
+        {/* <Sidebar isSidebar={isSidebar} /> */}
 
-        {/* <Employee_Sidebar isSidebar={isSidebar} /> */}
+        <Employee_Sidebar isSidebar={isSidebar} />
 
           <main className="content">
-          <Topbar setIsSidebar={setIsSidebar} />
 
-          {/* <Employee_Topbar isSidebar={isSidebar} /> */}
+          {/* <Topbar setIsSidebar={setIsSidebar} /> */}
+
+          <Employee_Topbar isSidebar={isSidebar} />
 
          
-            <Routes>
+            {/* <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={ <Login/> }/> 
             <Route path="/team" element={<Team />} />
@@ -71,15 +73,16 @@ function App() {
            <Route path="/piechart" element={ <Pie/> }/>
            <Route path="/linechart" element={ <Line/> }/>
            <Route path="/barchart" element={ <Chart/> }/>
-            </Routes>
+            </Routes> */}
 
 
 
-            {/* <Routes>
+            <Routes>
             <Route path="/employeeCR" element={ <EmployeeCR/> }/>
             <Route path="/employeePB" element={ <EmployeePB/> }/>
-            <Route path="/expense" element={ <Expenses/> }/>    
-            </Routes> */}
+            <Route path="/expense" element={ <Expenses/> }/>   
+            <Route path="/instalments" element={ <Instalments/> }/>     
+            </Routes> 
 
 
           </main>

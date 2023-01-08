@@ -24,6 +24,8 @@ import SouthAmericaIcon from '@mui/icons-material/SouthAmerica';
 
 import AssessmentIcon from '@mui/icons-material/Assessment';
 
+import MoneyIcon from '@mui/icons-material/Money';
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -189,6 +191,24 @@ const Sidebar = () => {
               title="Expenses"
               to="/expense"
               icon={<LocalAtmIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+
+
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "5px 0 5px 2px" }}
+            >
+             Instalments
+            </Typography>
+
+            <Item
+              title="Instalment"
+              to="/instalments"
+              icon={<MoneyIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
